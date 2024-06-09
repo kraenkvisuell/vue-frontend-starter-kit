@@ -24,12 +24,7 @@ dependencies:
   calebporzio/sushi: ^2.4
   guzzlehttp/guzzle: ^7.2
   inertiajs/inertia-laravel: ^1.0
-  kraenkvisuell/discount-codes: '*'
-  kraenkvisuell/has-statamic-fields: '*'
-  kraenkvisuell/shop-color: '*'
-  kraenkvisuell/sku-import: '*'
   kraenkvisuell/statamic-helpers: ^1.10.2
-  kraenkvisuell/translatable: '*'
   laravel/framework: ^11.0
   laravel/horizon: ^5.15
   laravel/pulse: ^1.0@beta
