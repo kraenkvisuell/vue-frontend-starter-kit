@@ -1,0 +1,96 @@
+tabs:
+  main:
+    display: Hauptteil
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Titel
+              localizable: false
+              validate:
+                - required
+          -
+            handle: localized_title
+            field:
+              type: translatable
+              display: 'Übersetzter Titel'
+              localizable: false
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      fields:
+                        -
+                          handle: text
+                          field:
+                            type: text
+                            display: Text
+                            localizable: false
+          -
+            handle: can_be_deactivated
+            field:
+              default: true
+              type: toggle
+              display: 'Kann deaktiviert werden'
+              localizable: false
+              width: 50
+          -
+            handle: is_activated_by_default
+            field:
+              type: toggle
+              display: 'Ist defaultmäßig an'
+              localizable: false
+              width: 50
+              if:
+                can_be_deactivated: 'equals true'
+          -
+            handle: description
+            field:
+              type: translatable
+              display: Beschreibung
+              localizable: false
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      fields:
+                        -
+                          handle: text
+                          field:
+                            buttons:
+                              - bold
+                              - italic
+                              - unorderedlist
+                              - orderedlist
+                              - anchor
+                            toolbar_mode: floating
+                            remove_empty_nodes: trim
+                            type: bard
+                            display: Text
+                            localizable: false
+      -
+        display: 'Neuer Abschnitt'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              required: true
+              validate:
+                - required
+                - 'max:200'
+              localizable: false
+              display: Text-ID
+title: 'Cookie Consent Group'

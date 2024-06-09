@@ -1,0 +1,252 @@
+title: Shop-Einstellungen
+tabs:
+  checkout:
+    display: 'im Kaufvorgang'
+    sections:
+      -
+        fields:
+          -
+            handle: short_terms_and_conditions
+            field:
+              display_mode: short
+              sets:
+                neue_set-gruppe:
+                  display: ''
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: text
+                          field:
+                            buttons:
+                              - anchor
+                              - bold
+                              - italic
+                            smart_typography: false
+                            save_html: false
+                            inline: false
+                            toolbar_mode: floating
+                            reading_time: false
+                            word_count: false
+                            fullscreen: true
+                            allow_source: true
+                            enable_input_rules: true
+                            enable_paste_rules: true
+                            remove_empty_nodes: trim
+                            antlers: false
+                            link_noopener: false
+                            link_noreferrer: false
+                            target_blank: false
+                            always_show_set_button: false
+                            collapse: false
+                            previews: true
+                            type: bard
+                            display: Text
+                            icon: bard
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              type: translatable
+              display: 'Akzeptierung der AGB und Datenschutzbestimmungen'
+              icon: translatable
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              localizable: true
+          -
+            handle: prepayment_explanation
+            field:
+              display_mode: short
+              sets:
+                neue_set-gruppe:
+                  display: ''
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: text
+                          field:
+                            buttons:
+                              - bold
+                              - italic
+                            smart_typography: false
+                            save_html: false
+                            inline: false
+                            toolbar_mode: floating
+                            reading_time: false
+                            word_count: false
+                            fullscreen: true
+                            allow_source: true
+                            enable_input_rules: true
+                            enable_paste_rules: true
+                            remove_empty_nodes: trim
+                            antlers: false
+                            link_noopener: false
+                            link_noreferrer: false
+                            target_blank: false
+                            always_show_set_button: false
+                            collapse: false
+                            previews: true
+                            type: bard
+                            display: Text
+                            icon: bard
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              type: translatable
+              display: 'Erklärung Vorauszahlung'
+              icon: translatable
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              localizable: true
+  registration:
+    display: 'Bei der Registrierung'
+    sections:
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            handle: acceptance_of_terms
+            field:
+              display_mode: short
+              sets:
+                neue_set-gruppe:
+                  display: ''
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: text
+                          field:
+                            buttons:
+                              - bold
+                              - italic
+                              - unorderedlist
+                              - anchor
+                            smart_typography: false
+                            save_html: false
+                            inline: false
+                            toolbar_mode: floating
+                            reading_time: false
+                            word_count: false
+                            fullscreen: true
+                            allow_source: true
+                            enable_input_rules: true
+                            enable_paste_rules: true
+                            remove_empty_nodes: trim
+                            antlers: false
+                            link_noopener: false
+                            link_noreferrer: false
+                            target_blank: false
+                            always_show_set_button: false
+                            collapse: false
+                            previews: true
+                            type: bard
+                            display: Text
+                            icon: bard
+                            localizable: false
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              type: translatable
+              display: 'Akzeptieren der AGB'
+              icon: translatable
+              localizable: false
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+  revocation:
+    display: Widerruf
+    sections:
+      -
+        fields:
+          -
+            handle: revocation_explanation
+            field:
+              display_mode: short
+              sets:
+                neue_set-gruppe:
+                  display: ''
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: text
+                          field:
+                            buttons:
+                              - h2
+                              - h3
+                              - bold
+                              - italic
+                              - unorderedlist
+                              - orderedlist
+                              - anchor
+                              - table
+                            smart_typography: false
+                            save_html: false
+                            inline: false
+                            toolbar_mode: floating
+                            reading_time: false
+                            word_count: false
+                            fullscreen: true
+                            allow_source: true
+                            enable_input_rules: true
+                            enable_paste_rules: true
+                            remove_empty_nodes: trim
+                            antlers: false
+                            link_noopener: false
+                            link_noreferrer: false
+                            target_blank: false
+                            always_show_set_button: false
+                            collapse: false
+                            previews: true
+                            type: bard
+                            display: Text
+                            icon: bard
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              type: translatable
+              display: Widerrufserklärung
+              icon: translatable
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              localizable: true

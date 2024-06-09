@@ -1,0 +1,36 @@
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.file-input {
+    @apply text-sm;
+}
+
+.file-input::file-selector-button {
+    @apply mr-4 text-white text-sm cursor-pointer select-none h-auto rounded relative;
+    @apply leading-none inline-flex align-middle justify-center whitespace-nowrap;
+    @apply text-center text-sm subpixel-antialiased items-center;
+
+    height: 2.375rem; /*  38px */
+    letter-spacing: -0.01em;
+    padding: .475rem 1.25rem;
+
+    background: linear-gradient(to bottom, #2e9fff 100%, #298fe6 100%);
+
+    @apply text-white border border-blue-700 border-b-blue-800 !important;
+
+    &:hover:not(:disabled), :active:not(:disabled) {
+        background: linear-gradient(to bottom, #257fcc 100%, #206fb3 100%);
+        @apply border-blue-800 border-b-blue-900 !important;
+    }
+
+    &:focus {
+        @apply ring-2 outline-none;
+    }
+
+    &:disabled {
+        @apply cursor-default;
+    }
+
+    @apply cursor-pointer border border-blue-700 border-b-blue-600 !important;
+
+}

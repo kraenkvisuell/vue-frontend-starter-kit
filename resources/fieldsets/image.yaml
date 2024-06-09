@@ -1,0 +1,19 @@
+title: Bild
+fields:
+  -
+    handle: image_file
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: Bild-Datei
+      instructions: 'Format: webp, jpg, png oder gif (webp ist ein Google- und SEO optimiertes Bildformat)'
+      localizable: false
+  -
+    handle: image_file_fallback
+    field:
+      container: assets
+      type: assets
+      display: 'Bild-Datei (Fallback)'
+      instructions: 'Wenn bei "Bild-Datei" webp verwendet wurde, muss für ältere Browser zusätzlich das Bild im Format jpg, png oder gif hochgeladen werden.'
+      localizable: false

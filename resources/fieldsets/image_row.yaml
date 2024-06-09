@@ -1,0 +1,71 @@
+title: 'Bilder in Reihe'
+fields:
+  -
+    handle: image_row
+    field:
+      collapse: true
+      fullscreen: false
+      type: replicator
+      display: 'Bilder in Reihe'
+      localizable: false
+      sets:
+        neue_set-gruppe:
+          display: 'Neue Set-Gruppe'
+          sets:
+            neues_set:
+              display: Bild
+              fields:
+                -
+                  handle: image
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: Bild
+                    localizable: false
+                    width: 50
+                -
+                  handle: link
+                  field:
+                    type: text
+                    display: Link
+                    localizable: false
+                    width: 50
+                -
+                  handle: title
+                  field:
+                    type: translatable
+                    display: Titel
+                    localizable: false
+                    sets:
+                      neue_set-gruppe:
+                        display: 'Neue Set-Gruppe'
+                        sets:
+                          neues_set:
+                            display: 'Neues Set'
+                            fields:
+                              -
+                                handle: text
+                                field:
+                                  type: text
+                                  display: Text
+                                  localizable: false
+                -
+                  handle: alt
+                  field:
+                    type: translatable
+                    display: Alt-Text
+                    localizable: false
+                    sets:
+                      neue_set-gruppe:
+                        display: 'Neue Set-Gruppe'
+                        sets:
+                          neues_set:
+                            display: 'Neues Set'
+                            fields:
+                              -
+                                handle: text
+                                field:
+                                  type: text
+                                  display: Text
+                                  localizable: false

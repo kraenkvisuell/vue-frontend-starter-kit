@@ -1,0 +1,16 @@
+title: Seiten
+sites:
+  - default
+  - suisse
+propagate: true
+template: default
+layout: layout
+search_index: pages
+revisions: false
+route: '/de/{slug}'
+sort_dir: asc
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

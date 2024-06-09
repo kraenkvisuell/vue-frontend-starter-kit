@@ -1,0 +1,56 @@
+title: Link-Buttons
+fields:
+  -
+    handle: link_buttons
+    field:
+      collapse: true
+      previews: true
+      fullscreen: true
+      sets:
+        neue_set-gruppe:
+          display: ''
+          instructions: null
+          icon: null
+          sets:
+            link_button:
+              display: Link-Button
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: text
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Text
+                    icon: text
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  import: link
+                -
+                  handle: bg_color
+                  field:
+                    type: shop_color
+                    display: Hintergrundfarbe
+                    icon: shop_color
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+      type: replicator
+      display: Link-Buttons
+      icon: replicator
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: false
+      hide_display: false

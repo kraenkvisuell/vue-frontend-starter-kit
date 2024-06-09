@@ -1,0 +1,77 @@
+title: 'Kleiner Störer'
+fields:
+  -
+    handle: has_disruptor
+    field:
+      default: false
+      type: toggle
+      display: 'Hat Störer'
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: disruptor_label
+    field:
+      display_mode: short
+      sets:
+        neue_set-gruppe:
+          display: ''
+          instructions: null
+          icon: null
+          sets:
+            neues_set:
+              display: 'Neues Set'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: text
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Text
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+      type: translatable
+      display: Störer-Text
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        has_disruptor: 'equals true'
+  -
+    handle: disruptor_bg_color
+    field: farbe.shop_color_field
+    config:
+      display: Störer-Hintergrundfarbe
+      if:
+        has_disruptor: 'equals true'
+  -
+    handle: disruptor_x
+    field: xy-position.x_phone
+    config:
+      display: 'Störer X-Position'
+      instructions: 'Horizontale Position vom Zentrum in Prozent, negativ für "nach links"'
+      width: 50
+      if:
+        has_disruptor: 'equals true'
+  -
+    handle: disruptor_y
+    field: xy-position.y_phone
+    config:
+      display: 'Störer Y-Position'
+      instructions: 'Vertikale Position vom Zentrum in Prozent, negativ für "nach oben"'
+      width: 50
+      if:
+        has_disruptor: 'equals true'

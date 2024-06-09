@@ -1,0 +1,52 @@
+title: Shop-Medium
+fields:
+  - handle: medium_file
+    field:
+      max_files: 1
+      mode: list
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: false
+      type: assets
+      display: Medium-Datei
+      icon: assets
+      listable: hidden
+      instructions_position: below
+      visibility: visible
+      hide_display: false
+      container: articles
+      instructions: |-
+        Bild: WebP, JPG, PNG oder GIF
+        Video: WebM oder MP4
+  - handle: medium_alt
+    field:
+      display_mode: short
+      sets:
+        neue_set-gruppe:
+          display: ''
+          instructions: null
+          icon: null
+          sets:
+            neues_set:
+              display: 'Neues Set'
+              instructions: null
+              icon: null
+              fields:
+                - handle: text
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+      type: translatable
+      display: Alt-Text
+      icon: translatable
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

@@ -1,0 +1,117 @@
+tabs:
+  main:
+    display: Hauptteil
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+              localizable: false
+          -
+            handle: localized_title
+            field:
+              type: translatable
+              display: 'Übersetzter Titel'
+              listable: false
+              sets:
+                main:
+                  sets:
+                    main_set:
+                      fields:
+                        -
+                          field:
+                            type: text
+                            display: 'Übersetzter Titel'
+                          handle: text
+              localizable: false
+          -
+            handle: show_title
+            field:
+              default: true
+              type: toggle
+              display: 'Titel auf der Seite anzeigen'
+              instructions: 'Titel wird als H1-Überschrift angezeigt - im Hero, wenn die Seite einen Hero hat, sonst alleine am Seitenfang'
+              localizable: false
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: localized_nav_title
+            field:
+              type: translatable
+              display: 'Übersetzter Navigations-Titel'
+              listable: false
+              sets:
+                main:
+                  display: null
+                  instructions: null
+                  icon: null
+                  sets:
+                    main_set:
+                      display: null
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: text
+                          field:
+                            type: text
+                            display: 'Übersetzter Navigations-Titel'
+                            localizable: false
+              localizable: false
+              instructions: 'Alternative, z.B. für kürzere Titel'
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              display_mode: short
+              hide_display: false
+      -
+        display: Inhalt
+        fields:
+          -
+            import: content_blocks
+  hero_tab:
+    display: Hero
+    sections:
+      -
+        fields:
+          -
+            import: hero
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            handle: seo_section
+            field:
+              type: section
+              display: SEO-Felder
+              instructions: 'Bei leer gelassenen Feldern wird das entsprechende Feld aus "Globale Inhalte -> Website" genommen.'
+              localizable: false
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            import: seo_fields
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: false
+              validate: 'max:200'
+title: Seite

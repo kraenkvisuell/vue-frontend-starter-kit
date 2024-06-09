@@ -1,0 +1,12 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-af77663f.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/js/discount-codes.js": {
+    "file": "assets/discount-codes-b7e8772a.js",
+    "isEntry": true,
+    "src": "resources/js/discount-codes.js"
+  }
+}

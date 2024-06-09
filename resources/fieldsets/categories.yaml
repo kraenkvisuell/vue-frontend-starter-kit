@@ -1,0 +1,42 @@
+title: Kategorien
+fields:
+  -
+    handle: categories
+    field:
+      collapse: true
+      previews: true
+      fullscreen: true
+      sets:
+        category:
+          display: Kategorie
+          instructions: null
+          icon: programming-module-box-cube
+          sets:
+            category:
+              display: Kategorie
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: category
+                  field:
+                    max_items: 1
+                    mode: default
+                    resource: product_category
+                    create: false
+                    type: belongs_to
+                    display: Kategorie
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+      type: replicator
+      display: Kategorien
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

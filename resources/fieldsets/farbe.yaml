@@ -1,0 +1,12 @@
+title: Farbe
+fields:
+  -
+    handle: shop_color_field
+    field:
+      type: shop_color
+      display: 'Shop Color Field'
+      icon: shop_color
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

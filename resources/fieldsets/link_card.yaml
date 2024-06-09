@@ -1,0 +1,193 @@
+title: Link-Kasten
+fields:
+  -
+    handle: title
+    field:
+      display_mode: short
+      sets:
+        neue_set-gruppe:
+          display: null
+          instructions: null
+          icon: null
+          sets:
+            neues_set:
+              display: 'Neues Set'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: title
+                  field:
+                    antlers: false
+                    type: textarea
+                    display: Titel
+                    icon: textarea
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+      type: translatable
+      display: Titel
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      localizable: false
+  -
+    import: width_in_layout
+  -
+    handle: card_type
+    field:
+      options:
+        image: Bild
+        text: Text
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      type: select
+      display: Kasten-Typ
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      default: image
+      width: 50
+      localizable: false
+      replicator_preview: true
+  -
+    handle: has_link
+    field: has_link.has_link
+    config:
+      width: 50
+  -
+    handle: link
+    field:
+      fields:
+        -
+          import: link
+      fullscreen: true
+      type: group
+      display: Link
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        has_link: 'equals true'
+  -
+    handle: medium_section
+    field:
+      type: section
+      display: 'Medium (Bild/Video)'
+      instructions: 'Wenn als Link-Typ "Modell" ausgewählt ist, wird automatisch ein passendes Medium des Modells genommen, wenn dieses Feld leer bleibt.'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      if:
+        card_type: 'equals image'
+      localizable: false
+  -
+    handle: medium_file
+    field: medium.medium_file
+    config:
+      if:
+        card_type: 'equals image'
+  -
+    handle: medium_fit
+    field: medium_fit.medium_fit
+    config:
+      if:
+        card_type: 'equals image'
+  -
+    handle: text
+    field:
+      display_mode: short
+      sets:
+        neue_set-gruppe:
+          display: null
+          instructions: null
+          icon: null
+          sets:
+            neues_set:
+              display: 'Neues Set'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: text
+                  field:
+                    buttons:
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - anchor
+                    smart_typography: true
+                    save_html: false
+                    inline: false
+                    toolbar_mode: floating
+                    reading_time: false
+                    fullscreen: true
+                    allow_source: true
+                    enable_input_rules: true
+                    enable_paste_rules: true
+                    remove_empty_nodes: trim
+                    antlers: false
+                    link_noopener: false
+                    link_noreferrer: false
+                    target_blank: false
+                    link_collections:
+                      - pages
+                    always_show_set_button: false
+                    collapse: false
+                    previews: true
+                    type: bard
+                    display: Editor-Text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    word_count: false
+                    localizable: false
+                    replicator_preview: true
+      type: translatable
+      display: Text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      if:
+        card_type: 'equals text'
+      localizable: false
+  -
+    handle: bg_color
+    field:
+      type: shop_color
+      display: Hintergrundfarbe
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      if:
+        card_type: 'equals text'
+      localizable: false
+  -
+    handle: disruptor_section
+    field:
+      type: section
+      display: Störer
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      if:
+        card_type: 'equals image'
+      localizable: false
+  -
+    import: small_disruptor

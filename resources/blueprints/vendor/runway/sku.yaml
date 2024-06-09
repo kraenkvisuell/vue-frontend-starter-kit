@@ -1,0 +1,143 @@
+tabs:
+  main:
+    display: Hauptteil
+    sections:
+      - fields:
+        -
+          field:
+            type: toggle
+            display: 'Is visible'
+            localizable: false
+            default: true
+            width: 50
+          handle: visible_in_shop
+        -
+          field:
+            type: toggle
+            display: 'Is available'
+            localizable: false
+            default: true
+            width: 50
+          handle: is_available
+        -
+          field:
+            type: text
+            display: 'SKU number'
+            localizable: false
+            validate:
+              - required
+              - 'new \Statamic\Rules\UniqueEntryValue({collection}, {id}, {site})'
+            width: 50
+          handle: title
+        -
+          field:
+            type: slug
+            from: title
+            display: Handle
+            localizable: false
+            width: 50
+            validate:
+              - required
+              - 'new \Statamic\Rules\UniqueEntryValue({collection}, {id}, {site})'
+          handle: slug
+        -
+          field:
+            type: text
+            display: EAN
+            localizable: false
+            validate: { }
+            width: 50
+          handle: ean
+        -
+          field:
+            type: text
+            display: 'Price incl. VAT'
+            localizable: false
+            validate: { }
+            width: 33
+          handle: price_incl_vat
+        -
+          field:
+            type: toggle
+            display: 'Has discount price'
+            localizable: false
+            default: false
+            width: 33
+          handle: has_discount_price
+        -
+          field:
+            type: text
+            if:
+              has_discount_price: 'equals true'
+            display: 'Discount price incl. VAT'
+            localizable: false
+            validate: { }
+            width: 33
+          handle: discount_price_incl_vat
+  images:
+    display: Medien
+    sections:
+      - fields:
+        -
+          handle: images
+          field:
+            collapse: true
+            previews: true
+            fullscreen: true
+            sets:
+              neue_set-gruppe:
+                display: ''
+                instructions: null
+                icon: null
+                sets:
+                  image:
+                    display: Bild
+                    instructions: null
+                    icon: null
+                    fields:
+                      - import: shop_medium
+            type: replicator
+            display: Bilder
+            icon: replicator
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+  merchant:
+    display: Händler
+    sections:
+      - fields:
+        -
+          field:
+            type: text
+            display: 'Merchant price excl. VAT'
+            localizable: false
+            validate: { }
+            width: 50
+          handle: merchant_price
+        -
+          field:
+            type: text
+            display: Season
+            localizable: false
+            validate: { }
+            width: 50
+          handle: season_name
+        -
+          field:
+            type: toggle
+            display: 'Is preorder'
+            localizable: false
+            default: false
+            width: 50
+          handle: is_preorder
+        -
+          field:
+            type: toggle
+            display: 'Is visible for merchants'
+            localizable: false
+            default: true
+            width: 50
+          handle: visible_for_merchants
+title: SKU

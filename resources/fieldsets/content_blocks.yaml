@@ -1,0 +1,313 @@
+title: Inhaltsblöcke
+fields:
+  -
+    handle: blocks
+    field:
+      collapse: true
+      fullscreen: false
+      type: replicator
+      display: Blöcke
+      localizable: false
+      sets:
+        neue_set-gruppe:
+          display: null
+          sets:
+            text:
+              display: Text
+              icon: text-formatting-initial-letter
+              fields:
+                -
+                  handle: text
+                  field:
+                    type: translatable
+                    display: Text
+                    localizable: false
+                    sets:
+                      neue_set-gruppe:
+                        display: null
+                        sets:
+                          neues_set:
+                            display: 'Neues Set'
+                            fields:
+                              -
+                                import: main_editor
+                -
+                  import: use_check_list
+                -
+                  import: button
+                -
+                  import: link_buttons
+            link_cards:
+              display: Link-Kästen
+              icon: dashboard-layout
+              fields:
+                -
+                  handle: cards
+                  field:
+                    collapse: true
+                    fullscreen: false
+                    type: replicator
+                    display: Kästen
+                    localizable: false
+                    sets:
+                      cards:
+                        display: null
+                        sets:
+                          cards:
+                            display: Kasten
+                            fields:
+                              -
+                                import: link_card
+            jobs:
+              display: Jobs
+              instructions: 'Eine Liste aller veröffentlichten Jobs'
+              icon: id-face-scan
+              fields:
+                -
+                  handle: description
+                  field:
+                    type: section
+                    instructions: 'Eine Liste aller veröffentlichten Jobs'
+                    localizable: false
+                -
+                  handle: intro
+                  field:
+                    type: translatable
+                    display: Intro
+                    localizable: false
+                    sets:
+                      neue_set-gruppe:
+                        display: 'Neue Set-Gruppe'
+                        sets:
+                          neues_set:
+                            display: 'Neues Set'
+                            fields:
+                              -
+                                handle: text
+                                field:
+                                  buttons:
+                                    - h2
+                                    - h3
+                                    - h4
+                                    - h5
+                                    - h6
+                                    - bold
+                                    - italic
+                                    - unorderedlist
+                                    - orderedlist
+                                    - anchor
+                                    - alignleft
+                                    - aligncenter
+                                  toolbar_mode: floating
+                                  remove_empty_nodes: trim
+                                  type: bard
+                                  display: Text
+                                  localizable: false
+            embed_code:
+              display: 'Embed Code'
+              instructions: 'ex.: Vimeo, Google Maps'
+              icon: programming-script-code-brackets
+              fields:
+                -
+                  import: embed_code
+                -
+                  import: caption_and_credits
+            slideshow:
+              display: Slideshow
+              icon: media-image-picture-gallery
+              fields:
+                -
+                  handle: slides
+                  field:
+                    type: replicator
+                    display: Slides
+                    localizable: false
+                    sets:
+                      neue_set-gruppe:
+                        display: null
+                        sets:
+                          slide:
+                            display: Slide
+                            fields:
+                              -
+                                handle: slide
+                                field:
+                                  max_files: 1
+                                  mode: list
+                                  container: assets
+                                  restrict: false
+                                  allow_uploads: true
+                                  show_filename: true
+                                  show_set_alt: true
+                                  type: assets
+                                  display: Slide
+                                  icon: assets
+                                  localizable: false
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+            medium_card:
+              display: Bild
+              icon: media-image-picture-orientation
+              fields:
+                -
+                  import: medium
+                -
+                  import: force_ratio
+                -
+                  handle: title_section
+                  field:
+                    type: section
+                    display: Titel
+                    localizable: false
+                -
+                  import: medium_title
+                -
+                  handle: text_section
+                  field:
+                    type: section
+                    display: Text
+                    localizable: false
+                    replicator_preview: false
+                -
+                  handle: has_text
+                  field:
+                    type: toggle
+                    display: 'Hat Text-Bereich'
+                    localizable: false
+                -
+                  handle: text
+                  field:
+                    type: translatable
+                    display: Text
+                    localizable: false
+                    if:
+                      has_text: 'equals true'
+                    sets:
+                      neue_set-gruppe:
+                        display: null
+                        sets:
+                          neues_set:
+                            display: 'Neues Set'
+                            fields:
+                              -
+                                handle: editor_text
+                                field: main_editor.editor_text
+                -
+                  handle: bg_color
+                  field: farbe.shop_color_field
+                  config:
+                    display: Hintergrundfarbe
+                    if:
+                      has_text: 'equals true'
+                -
+                  handle: link_section
+                  field:
+                    type: section
+                    display: Link
+                    localizable: false
+                -
+                  handle: has_link
+                  field:
+                    type: toggle
+                    display: 'Hat Link'
+                    localizable: false
+                    replicator_preview: false
+                -
+                  handle: link_type
+                  field: link.link_type
+                  config:
+                    if:
+                      has_link: 'equals true'
+                -
+                  handle: linked_product_category
+                  field: link.linked_product_category
+                  config:
+                    if:
+                      link_type: 'equals shop'
+                      has_link: 'equals true'
+                -
+                  handle: linked_product_group
+                  field: link.linked_product_group
+                  config:
+                    if:
+                      link_type: 'equals shop'
+                      has_link: 'equals true'
+                -
+                  handle: linked_product
+                  field: link.linked_product
+                  config:
+                    if:
+                      link_type: 'equals product'
+                      has_link: 'equals true'
+                -
+                  handle: linked_page
+                  field: link.linked_page
+                  config:
+                    if:
+                      link_type: 'equals page'
+                      has_link: 'equals true'
+                -
+                  handle: linked_product_tag
+                  field: link.linked_product_tag
+                  config:
+                    if:
+                      link_type: 'equals shop'
+                      has_link: 'equals true'
+            selected_products:
+              display: 'Ausgewählte Modelle'
+              icon: addon-boxes-stack
+              fields:
+                -
+                  handle: products
+                  field:
+                    resource: product
+                    create: false
+                    type: has_many
+                    display: Modelle
+                    localizable: false
+                    with:
+                      - product_categories
+                      - product_tags
+                      - product_group
+                      - skus
+            image_row:
+              display: 'Bilder in Reihe'
+              icon: media-image-picture-gallery
+              fields:
+                -
+                  handle: intro
+                  field:
+                    type: translatable
+                    display: Intro
+                    localizable: false
+                    sets:
+                      neue_set-gruppe:
+                        display: 'Neue Set-Gruppe'
+                        sets:
+                          neues_set:
+                            display: 'Neues Set'
+                            fields:
+                              -
+                                handle: text
+                                field:
+                                  buttons:
+                                    - h2
+                                    - h3
+                                    - h4
+                                    - h5
+                                    - h6
+                                    - bold
+                                    - italic
+                                    - unorderedlist
+                                    - orderedlist
+                                    - anchor
+                                  toolbar_mode: floating
+                                  remove_empty_nodes: trim
+                                  type: bard
+                                  display: Text
+                                  localizable: false
+                -
+                  import: image_row

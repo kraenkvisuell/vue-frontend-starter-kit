@@ -1,0 +1,64 @@
+tabs:
+  main:
+    display: Hauptteil
+    sections:
+      -
+        fields:
+          -
+            handle: code
+            field:
+              type: text
+              display: Code
+              localizable: false
+              visibility: read_only
+              listable: true
+          -
+            handle: statamic_usable
+            field:
+              type: toggle
+              display: 'Im Moment verwendbar'
+              localizable: false
+              visibility: hidden
+              searchable: false
+              listable: true
+          -
+            handle: statamic_active_range
+            field:
+              type: text
+              display: 'Zeitraum'
+              localizable: false
+              listable: true
+          -
+            handle: statamic_mode
+            field:
+              type: text
+              display: Modus
+              localizable: false
+              visibility: hidden
+              listable: true
+          -
+            handle: statamic_value
+            field:
+              type: text
+              display: Wert
+              localizable: false
+              visibility: hidden
+              listable: true
+          -
+            handle: statamic_active
+            field:
+              type: toggle
+              display: Aktiv
+              localizable: false
+              visibility: hidden
+          -
+            handle: statamic_usages
+            field:
+              type: discount_code_usages
+              display: Verwendungen
+              localizable: false
+              listable: true
+              visibility: hidden
+      -
+        display: 'Neuer Abschnitt'
+title: 'Discount code'

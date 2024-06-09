@@ -1,0 +1,53 @@
+title: Order
+tabs:
+  main:
+    display: Hauptteil
+    sections:
+      -
+        fields:
+          -
+            handle: order_number
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Bestellnummer
+              localizable: false
+              listable: true
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: customer
+            field:
+              max_items: 1
+              mode: default
+              resource: customer
+              create: false
+              type: belongs_to
+              display: Kunde
+              localizable: false
+              listable: true
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: placed_at
+            field:
+              mode: single
+              inline: false
+              full_width: false
+              columns: 1
+              rows: 1
+              time_enabled: true
+              time_seconds_enabled: false
+              type: date
+              display: Datum/Uhrzeit
+              localizable: false
+              listable: true
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false

@@ -1,0 +1,12 @@
+title: 'Benötigt Cookie Consent'
+fields:
+  -
+    handle: needs_cookie_consent
+    field:
+      max_items: 1
+      mode: select
+      taxonomies:
+        - cookie_consent_groups
+      type: terms
+      display: 'Benötigt Cookie Consent'
+      localizable: false

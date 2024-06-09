@@ -1,0 +1,30 @@
+title: Ausschnitt
+fields:
+  -
+    handle: medium_fit
+    field:
+      options:
+        center: Mitte
+        top-left: 'Oben Links'
+        top: 'Oben Mitte'
+        top-right: 'Oben Rechts'
+        left: 'Mitte Links'
+        right: 'Mitte Rechts'
+        bottom-left: 'Unten links'
+        bottom: 'Unten Mitte'
+        bottom-right: 'Unten Rechts'
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: center
+      type: select
+      display: Ausschnitt
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: false
+      hide_display: false

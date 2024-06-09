@@ -1,0 +1,40 @@
+tabs:
+  main:
+    display: Hauptteil
+    sections:
+      -
+        fields:
+          -
+            handle: form_success_message
+            field:
+              type: translatable
+              display: 'Erfolgsmeldung Job-Formular'
+              localizable: false
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      fields:
+                        -
+                          handle: text
+                          field:
+                            buttons:
+                              - h2
+                              - h3
+                              - bold
+                              - italic
+                              - anchor
+                            toolbar_mode: floating
+                            remove_empty_nodes: trim
+                            type: bard
+                            display: Text
+                            localizable: false
+          -
+            handle: job_application_recipients
+            field:
+              type: text
+              display: 'Empfänger Stellen-Bewergung'
+              instructions: 'Mehrere können kommagetrennt eingegeben werden'
+              localizable: true

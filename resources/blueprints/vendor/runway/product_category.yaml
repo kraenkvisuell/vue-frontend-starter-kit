@@ -1,0 +1,57 @@
+title: 'Product Category'
+tabs:
+  main:
+    display: Hauptteil
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              display: Title
+              localizable: false
+              listable: true
+              visibility: read_only
+          -
+            handle: description
+            field:
+              type: translatable
+              display: Beschreibung
+              localizable: false
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      fields:
+                        -
+                          handle: text
+                          field: main_editor.editor_text
+                          config:
+                            buttons:
+                              - h2
+                              - h3
+                              - h4
+                              - h5
+                              - bold
+                              - italic
+                              - unorderedlist
+                              - orderedlist
+                              - anchor
+                              - underline
+                              - horizontalrule
+                              - alignleft
+                              - aligncenter
+                              - alignright
+                            display: text
+          -
+            handle: seo_section
+            field:
+              type: section
+              display: SEO
+              instructions: 'OPTIONAL - wenn leer, werden die Felder automatisch aus den Daten der Kollektion (Name, Beschreibung) gefüllt.'
+              localizable: false
+          -
+            import: seo_fields

@@ -1,0 +1,49 @@
+title: Haupt-Text-Editor
+fields:
+  -
+    handle: editor_text
+    field:
+      buttons:
+        - h1
+        - h2
+        - h3
+        - h4
+        - h5
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - anchor
+        - underline
+        - horizontalrule
+        - alignleft
+        - aligncenter
+        - alignright
+      smart_typography: true
+      save_html: false
+      inline: false
+      toolbar_mode: floating
+      reading_time: false
+      fullscreen: true
+      allow_source: true
+      enable_input_rules: true
+      enable_paste_rules: true
+      remove_empty_nodes: trim
+      antlers: false
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      link_collections:
+        - pages
+      always_show_set_button: false
+      collapse: false
+      previews: true
+      type: bard
+      display: Editor-Text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      word_count: false
+      localizable: false
+      replicator_preview: true

@@ -1,0 +1,34 @@
+title: 'Product Group'
+tabs:
+  main:
+    display: Hauptteil
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Title
+              localizable: false
+              listable: true
+              instructions_position: above
+              visibility: read_only
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: seo_section
+            field:
+              type: section
+              display: SEO
+              instructions: 'OPTIONAL - wenn leer, werden die Felder automatisch aus den Daten der Kollektion (Name, Beschreibung) gefüllt.'
+              localizable: false
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            import: seo_fields

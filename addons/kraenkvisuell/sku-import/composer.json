@@ -1,0 +1,20 @@
+{
+    "name": "kraenkvisuell/sku-import",
+    "version": "1.0.1",
+    "autoload": {
+        "psr-4": {
+            "Kraenkvisuell\\SkuImport\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Sku Import",
+            "description": "Sku Import addon"
+        },
+        "laravel": {
+            "providers": [
+                "Kraenkvisuell\\SkuImport\\ServiceProvider"
+            ]
+        }
+    }
+}

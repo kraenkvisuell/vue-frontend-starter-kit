@@ -1,0 +1,113 @@
+title: Video
+fields:
+  - handle: medium_type
+    field:
+      options:
+        file: Datei
+        embed_code: 'Embed Code'
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: file
+      type: select
+      display: Video-Typ
+      icon: select
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  - handle: medium_file
+    field:
+      max_files: 1
+      mode: list
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: false
+      type: assets
+      display: Video-Datei
+      icon: assets
+      listable: hidden
+      instructions_position: below
+      visibility: visible
+      hide_display: false
+      if:
+        medium_type: 'equals file'
+      container: assets
+      width: 50
+      instructions: |-
+        WebM oder MP4
+  - handle: medium_fallback_file
+    field:
+      max_files: 1
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: false
+      type: assets
+      display: 'Video Fallback-Datei'
+      icon: assets
+      width: 50
+      listable: hidden
+      instructions_position: below
+      visibility: visible
+      hide_display: false
+      if:
+        medium_type: 'equals file'
+      instructions: 'Optional - z.B. MP4 wenn die Video-Datei ein WebM ist.'
+  - handle: medium_embed_code
+    field:
+      theme: material
+      mode: htmlmixed
+      mode_selectable: true
+      indent_type: tabs
+      indent_size: 4
+      key_map: default
+      line_numbers: true
+      line_wrapping: true
+      antlers: false
+      type: code
+      display: 'Embed Code'
+      icon: code
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      if:
+        medium_type: 'equals embed_code'
+  - handle: medium_alt
+    field:
+      display_mode: short
+      sets:
+        neue_set-gruppe:
+          display: ''
+          instructions: null
+          icon: null
+          sets:
+            neues_set:
+              display: 'Neues Set'
+              instructions: null
+              icon: null
+              fields:
+                - handle: text
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+      type: translatable
+      display: Alt-Text
+      icon: translatable
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

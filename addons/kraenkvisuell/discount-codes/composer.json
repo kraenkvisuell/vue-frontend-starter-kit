@@ -1,0 +1,37 @@
+{
+    "name": "kraenkvisuell/discount-codes",
+    "autoload": {
+        "psr-4": {
+            "Kraenkvisuell\\DiscountCodes\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kraenkvisuell\\DiscountCodes\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "statamic/cms": "^5.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pixelfear/composer-dist-plugin": true
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Discount Codes",
+            "description": "Discount Codes addon"
+        },
+        "laravel": {
+            "providers": [
+                "Kraenkvisuell\\DiscountCodes\\ServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

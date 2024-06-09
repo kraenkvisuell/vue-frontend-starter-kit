@@ -1,0 +1,84 @@
+title: Header-Balken-Eintrag
+fields:
+  -
+    handle: show
+    field:
+      default: false
+      type: toggle
+      display: Anzeigen
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: text
+    field:
+      display_mode: short
+      sets:
+        neue_set-gruppe:
+          display: ''
+          instructions: null
+          icon: null
+          sets:
+            neues_set:
+              display: 'Neues Set'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: text
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Text
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+      type: translatable
+      display: Text
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        show: 'equals true'
+  -
+    handle: has_link
+    field:
+      default: false
+      type: toggle
+      display: 'Hat Link'
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        show: 'equals true'
+  -
+    handle: link
+    field:
+      fields:
+        -
+          import: link
+      fullscreen: false
+      type: group
+      display: Link
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        has_link: 'equals true'
+        show: 'equals true'

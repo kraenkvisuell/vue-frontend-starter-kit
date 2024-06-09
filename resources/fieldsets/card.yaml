@@ -1,0 +1,130 @@
+title: Kasten
+fields:
+  -
+    handle: title
+    field:
+      display_mode: short
+      sets:
+        neue_set-gruppe:
+          display: ''
+          instructions: null
+          icon: null
+          sets:
+            neues_set:
+              display: 'Neues Set'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: title
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Titel
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+      type: translatable
+      display: Titel
+      icon: translatable
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: text
+    field:
+      display_mode: short
+      sets:
+        neue_set-gruppe:
+          display: ''
+          instructions: null
+          icon: null
+          sets:
+            neues_set:
+              display: 'Neues Set'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: text
+                  field:
+                    antlers: false
+                    type: textarea
+                    display: Text
+                    icon: textarea
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+      type: translatable
+      display: Text
+      icon: translatable
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: bg_color
+    field:
+      type: shop_color
+      display: Hintergrundfarbe
+      icon: shop_color
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: card_type
+    field:
+      options:
+        image: Bild
+        icon: Icon
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      type: select
+      display: Kasten-Typ
+      icon: select
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: image_file
+    field: image.image_file
+    config:
+      if:
+        card_type: 'equals image'
+  -
+    handle: image_file_fallback
+    field: image.image_file_fallback
+    config:
+      if:
+        card_type: 'equals image'
+  -
+    handle: icon
+    field:
+      options:
+        briefcase: Aktentasche
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      type: select
+      display: Icon
+      icon: select
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      if:
+        card_type: 'equals icon'

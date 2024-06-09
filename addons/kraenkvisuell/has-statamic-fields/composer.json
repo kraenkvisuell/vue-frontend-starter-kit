@@ -1,0 +1,30 @@
+{
+    "name": "kraenkvisuell/has-statamic-fields",
+    "version": "1.0.0",
+    "autoload": {
+        "psr-4": {
+            "Kraenkvisuell\\HasStatamicFields\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "HasStatamicFields",
+            "description": "HasStatamicFields addon"
+        },
+        "laravel": {
+            "providers": [
+                "Kraenkvisuell\\HasStatamicFields\\ServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "laravel/framework": "^10.0",
+        "statamic/cms": "^4.0",
+        "statamic/eloquent-driver": "^2.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pixelfear/composer-dist-plugin": true
+        }
+    }
+}

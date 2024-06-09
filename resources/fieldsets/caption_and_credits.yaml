@@ -1,0 +1,12 @@
+title: 'Caption und Credits'
+fields:
+  -
+    handle: caption
+    field: caption.caption
+    config:
+      width: 50
+  -
+    handle: credits
+    field: credits.credits
+    config:
+      width: 50

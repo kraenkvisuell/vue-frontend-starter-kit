@@ -1,0 +1,29 @@
+{
+    "name": "kraenkvisuell/shop-color",
+    "version": "1.0.1",
+    "autoload": {
+        "psr-4": {
+            "Kraenkvisuell\\ShopColor\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "ShopColor",
+            "description": "ShopColor addon"
+        },
+        "laravel": {
+            "providers": [
+                "Kraenkvisuell\\ShopColor\\ServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "laravel/framework": "^10.0",
+        "statamic/cms": "^4.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pixelfear/composer-dist-plugin": true
+        }
+    }
+}

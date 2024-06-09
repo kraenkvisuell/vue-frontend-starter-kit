@@ -1,0 +1,164 @@
+tabs:
+  main:
+    display: Hauptteil
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+              localizable: false
+          -
+            handle: localized_title
+            field:
+              type: translatable
+              display: 'Übersetzter Titel'
+              localizable: false
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      fields:
+                        -
+                          handle: text
+                          field:
+                            type: text
+                            display: Text
+                            localizable: false
+          -
+            handle: subtitle
+            field:
+              type: translatable
+              display: Untertitel
+              instructions: 'Falls nichts eingetragen wird: (m/w/d)'
+              localizable: false
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      fields:
+                        -
+                          handle: text
+                          field:
+                            type: text
+                            display: Text
+                            localizable: false
+          -
+            handle: start_date
+            field:
+              type: date
+              display: 'Voraussichtlicher Beginn'
+              localizable: false
+              width: 33
+              instructions: 'OPTIONAL - wenn leer ab sofort.'
+          -
+            handle: visible_from
+            field:
+              type: date
+              display: 'Sichtbar ab'
+              instructions: 'OPTIONAL - wenn leer immer sichtbar.'
+              localizable: false
+              width: 33
+          -
+            handle: visible_until
+            field:
+              type: date
+              display: 'Sichtbar bis'
+              instructions: 'OPTIONAL - wenn leer immer sichtbar.'
+              localizable: false
+              width: 33
+      -
+        display: Inhalt
+        fields:
+          -
+            import: content_blocks
+  hero_tab:
+    display: Hero
+    sections:
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            handle: has_hero
+            field: hero.has_hero
+          -
+            handle: hero_size
+            field: hero.hero_size
+            config:
+              default: sm
+              if:
+                has_hero: 'equals true'
+          -
+            handle: hero_type
+            field: hero.hero_type
+            config:
+              if:
+                has_hero: 'equals true'
+          -
+            handle: title_size
+            field: hero.title_size
+          -
+            handle: title_position
+            field: hero.title_position
+          -
+            handle: hero_slideshow
+            field: hero.hero_slideshow
+            config:
+              if:
+                has_hero: 'equals true'
+                hero_type: 'equals slideshow'
+              always_save: true
+          -
+            handle: hero_video_desktop
+            field: hero.hero_video_desktop
+            config:
+              validate:
+                - 'mimes:mp4,webm'
+              if:
+                has_hero: 'equals true'
+                hero_type: 'equals video'
+              always_save: true
+          -
+            handle: hero_video_phone
+            field: hero.hero_video_phone
+            config:
+              validate:
+                - 'mimes:mp4,webm'
+              if:
+                has_hero: 'equals true'
+                hero_type: 'equals video'
+              always_save: true
+          -
+            handle: disruptor_section
+            field: hero.disruptor_section
+            config:
+              if:
+                has_hero: 'equals true'
+                hero_size: 'not sm'
+          -
+            handle: hero_disruptors
+            field: hero.hero_disruptors
+            config:
+              if:
+                has_hero: 'equals true'
+                hero_size: 'not sm'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+title: Job

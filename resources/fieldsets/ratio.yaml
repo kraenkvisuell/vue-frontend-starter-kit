@@ -1,0 +1,31 @@
+title: Seitenverhältnis
+fields:
+  -
+    handle: ratio
+    field:
+      options:
+        '2:1': '2:1'
+        '16:9': '16:9'
+        '8:5': '8:5'
+        '5:3': '5:3'
+        '4:3': '4:3'
+        '1:1': '1:1'
+        '3:4': '3:4'
+        '3:5': '3:5'
+        '5:8': '5:8'
+        '9:16': '9:16'
+        '1:2': '1:2'
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: '1:1'
+      type: select
+      display: Seitenverhältnis
+      icon: select
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

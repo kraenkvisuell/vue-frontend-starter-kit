@@ -1,0 +1,27 @@
+title: Credits
+fields:
+  -
+    handle: credits
+    field:
+      type: translatable
+      display: Credits
+      localizable: false
+      sets:
+        neue_set-gruppe:
+          display: null
+          sets:
+            neues_set:
+              display: 'Neues Set'
+              fields:
+                -
+                  handle: text
+                  field:
+                    buttons:
+                      - bold
+                      - italic
+                      - anchor
+                    toolbar_mode: floating
+                    remove_empty_nodes: trim
+                    type: bard
+                    display: Text
+                    localizable: false

@@ -1,0 +1,33 @@
+{
+    "name": "kraenkvisuell/translatable",
+    "version": "1.0.1",
+    "autoload": {
+        "psr-4": {
+            "Kraenkvisuell\\Translatable\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Translatable",
+            "description": "Translatable addon"
+        },
+        "laravel": {
+            "providers": [
+                "Kraenkvisuell\\Translatable\\ServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "spatie/laravel-translatable": "^6.5"
+    },
+    "require-dev": {
+        "laravel/framework": "^10.0",
+        "statamic/cms": "^4.0",
+        "statamic/eloquent-driver": "^2.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pixelfear/composer-dist-plugin": true
+        }
+    }
+}

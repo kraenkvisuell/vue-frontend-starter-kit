@@ -1,0 +1,11 @@
+title: Händler
+tabs:
+  main:
+    display: Hauptteil
+    sections:
+      - fields:
+          - field:
+              type: text
+              display: 'Firma'
+              width: 50
+            handle: company_name

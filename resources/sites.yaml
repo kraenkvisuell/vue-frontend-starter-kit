@@ -1,0 +1,8 @@
+default:
+  name: Deutschland
+  locale: de_DE
+  url: 'https://zwei-bags.test'
+suisse:
+  name: Schweiz
+  locale: de_CH
+  url: 'https://zwei-bags-ch.test'

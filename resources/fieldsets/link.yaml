@@ -1,0 +1,130 @@
+title: Link
+fields:
+  -
+    handle: link_type
+    field:
+      options:
+        page: Seite
+        product: Modell
+        shop: Shop
+        cart: Warenkorb
+        external: 'Externe URL'
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      type: select
+      display: Link-Typ
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      default: page
+      localizable: false
+      replicator_preview: true
+  -
+    handle: linked_page
+    field:
+      max_items: 1
+      mode: default
+      create: false
+      collections:
+        - pages
+      type: entries
+      display: 'Link zu Seite'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      if:
+        link_type: 'equals page'
+      localizable: false
+      replicator_preview: true
+  -
+    handle: linked_product
+    field:
+      max_items: 1
+      relationship_name: Product
+      mode: default
+      resource: product
+      create: false
+      type: belongs_to
+      display: 'Link zu Modell'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      if:
+        link_type: 'equals product'
+      localizable: false
+  -
+    handle: linked_product_category
+    field:
+      max_items: 1
+      relationship_name: Kategorie
+      mode: select
+      resource: product_category
+      create: false
+      type: belongs_to
+      display: 'Link zu Kategorie'
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        link_type: 'equals shop'
+  -
+    handle: linked_product_tag
+    field:
+      max_items: 1
+      relationship_name: Unterkategorie
+      mode: select
+      resource: product_tag
+      create: false
+      type: belongs_to
+      display: 'Link zu Unterkategorie'
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        link_type: 'equals shop'
+  -
+    handle: linked_product_group
+    field:
+      max_items: 1
+      relationship_name: Kollektion
+      mode: select
+      resource: product_group
+      create: false
+      type: belongs_to
+      display: 'Link zu Kollektion'
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        link_type: 'equals shop'
+  -
+    handle: external_url
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Externe URL'
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        link_type: 'equals external'

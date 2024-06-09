@@ -1,0 +1,24 @@
+title: Bild-Titel
+fields:
+  -
+    handle: title
+    field:
+      type: translatable
+      display: Titel
+      localizable: false
+      instructions: 'Erscheint als große Überschrift auf dem Bild'
+      sets:
+        neue_set-gruppe:
+          display: 'Neue Set-Gruppe'
+          sets:
+            neues_set:
+              display: 'Neues Set'
+              fields:
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Text
+                    localizable: false
+  -
+    import: title_position_size

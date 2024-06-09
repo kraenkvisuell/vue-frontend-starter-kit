@@ -1,0 +1,172 @@
+title: Medium
+fields:
+  -
+    handle: medium_file
+    field:
+      max_files: 1
+      mode: list
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: false
+      type: assets
+      display: Medium-Datei
+      listable: hidden
+      instructions_position: below
+      visibility: visible
+      hide_display: false
+      container: assets
+      instructions: |-
+        Bild: WebP, JPG, PNG oder GIF
+        Video: WebM oder MP4
+      localizable: false
+      replicator_preview: true
+  -
+    handle: medium_alt
+    field:
+      display_mode: short
+      sets:
+        neue_set-gruppe:
+          display: ''
+          instructions: null
+          icon: null
+          sets:
+            neues_set:
+              display: 'Neues Set'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: text
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    localizable: false
+      type: translatable
+      display: Alt-Text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      localizable: false
+      replicator_preview: true
+  -
+    handle: caption
+    field:
+      display_mode: short
+      sets:
+        neue_set-gruppe:
+          display: ''
+          instructions: null
+          icon: null
+          sets:
+            neues_set:
+              display: 'Neues Set'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: text
+                  field:
+                    buttons:
+                      - bold
+                      - italic
+                      - anchor
+                    smart_typography: false
+                    save_html: false
+                    inline: false
+                    toolbar_mode: floating
+                    reading_time: false
+                    word_count: false
+                    fullscreen: true
+                    allow_source: true
+                    enable_input_rules: true
+                    enable_paste_rules: true
+                    remove_empty_nodes: trim
+                    antlers: false
+                    link_noopener: false
+                    link_noreferrer: false
+                    target_blank: false
+                    always_show_set_button: false
+                    collapse: false
+                    previews: true
+                    type: bard
+                    display: text
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+      type: translatable
+      display: Caption
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: credits
+    field:
+      display_mode: short
+      sets:
+        neue_set-gruppe:
+          display: ''
+          instructions: null
+          icon: null
+          sets:
+            neues_set:
+              display: 'Neues Set'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: text
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: text
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+      type: translatable
+      display: Credits
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: medium_width
+    field:
+      options:
+        full: 'volle Breite'
+        less: 'etwas schmaler'
+        half: 'halbe Breite'
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: full
+      type: select
+      display: Breite
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

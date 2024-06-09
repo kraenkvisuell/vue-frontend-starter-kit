@@ -1,0 +1,23 @@
+title: 'Breite im Layout'
+fields:
+  -
+    handle: width_in_layout
+    field:
+      options:
+        full: 'Zwei Kästen'
+        half: 'Ein Kasten'
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: half
+      type: select
+      display: 'Breite im Layout'
+      icon: select
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      width: 50

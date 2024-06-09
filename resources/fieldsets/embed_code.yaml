@@ -1,0 +1,27 @@
+title: 'Embed Code'
+fields:
+  -
+    handle: embed_code
+    field:
+      theme: material
+      mode: htmlmixed
+      mode_selectable: false
+      indent_type: tabs
+      indent_size: 4
+      key_map: default
+      line_numbers: true
+      line_wrapping: true
+      antlers: false
+      type: code
+      display: 'Embed Code'
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: false
+      hide_display: false
+  -
+    handle: ratio
+    field: ratio.ratio
+    config:
+      default: '16:9'

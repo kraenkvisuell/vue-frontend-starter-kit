@@ -1,0 +1,255 @@
+title: Shop-Einstellungen
+tabs:
+  main:
+    display: Hauptteil
+    sections:
+      - fields:
+          - handle: general_help_text
+            field:
+              display_mode: short
+              sets:
+                neue_set-gruppe:
+                  display: ''
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        - handle: text
+                          field:
+                            buttons:
+                              - h2
+                              - h3
+                              - bold
+                              - italic
+                              - unorderedlist
+                              - orderedlist
+                              - anchor
+                              - table
+                            smart_typography: false
+                            save_html: false
+                            inline: false
+                            toolbar_mode: floating
+                            reading_time: false
+                            word_count: false
+                            fullscreen: true
+                            allow_source: true
+                            enable_input_rules: true
+                            enable_paste_rules: true
+                            remove_empty_nodes: trim
+                            antlers: false
+                            link_noopener: false
+                            link_noreferrer: false
+                            target_blank: false
+                            always_show_set_button: false
+                            collapse: false
+                            previews: true
+                            type: bard
+                            display: Text
+                            icon: bard
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              type: translatable
+              display: 'Allgemeiner Hilfe-Text'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              localizable: false
+          - handle: cart_bottom_info
+            field:
+              display_mode: short
+              sets:
+                neue_set-gruppe:
+                  display: ''
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        - handle: text
+                          field:
+                            buttons:
+                              - h2
+                              - h3
+                              - bold
+                              - italic
+                              - unorderedlist
+                              - orderedlist
+                              - anchor
+                              - table
+                            smart_typography: false
+                            save_html: false
+                            inline: false
+                            toolbar_mode: floating
+                            reading_time: false
+                            word_count: false
+                            fullscreen: true
+                            allow_source: true
+                            enable_input_rules: true
+                            enable_paste_rules: true
+                            remove_empty_nodes: trim
+                            antlers: false
+                            link_noopener: false
+                            link_noreferrer: false
+                            target_blank: false
+                            always_show_set_button: false
+                            collapse: false
+                            previews: true
+                            type: bard
+                            display: Text
+                            icon: bard
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              type: translatable
+              display: Warenkorb-Info
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              localizable: false
+          - handle: close_to_free_alert
+            field:
+              display_mode: short
+              sets:
+                neue_set-gruppe:
+                  display: ''
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        - handle: text
+                          field:
+                            buttons:
+                              - h2
+                              - h3
+                              - bold
+                              - italic
+                              - unorderedlist
+                              - orderedlist
+                              - anchor
+                              - table
+                            smart_typography: false
+                            save_html: false
+                            inline: false
+                            toolbar_mode: floating
+                            reading_time: false
+                            word_count: false
+                            fullscreen: true
+                            allow_source: true
+                            enable_input_rules: true
+                            enable_paste_rules: true
+                            remove_empty_nodes: trim
+                            antlers: false
+                            link_noopener: false
+                            link_noreferrer: false
+                            target_blank: false
+                            always_show_set_button: false
+                            collapse: false
+                            previews: true
+                            type: bard
+                            display: Text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                            localizable: false
+              type: translatable
+              display: Frachtkostenfrei-Hinweis
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              localizable: false
+              instructions: 'Mögliche Platzhalter: {limit}, {rest}'
+          - handle: merchant_terms
+            field:
+              display_mode: short
+              sets:
+                neue_set-gruppe:
+                  display: ''
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        - handle: text
+                          field:
+                            buttons:
+                              - h2
+                              - h3
+                              - bold
+                              - italic
+                              - unorderedlist
+                              - orderedlist
+                              - anchor
+                              - table
+                            smart_typography: false
+                            save_html: false
+                            inline: false
+                            toolbar_mode: floating
+                            reading_time: false
+                            word_count: false
+                            fullscreen: true
+                            allow_source: true
+                            enable_input_rules: true
+                            enable_paste_rules: true
+                            remove_empty_nodes: trim
+                            antlers: false
+                            link_noopener: false
+                            link_noreferrer: false
+                            target_blank: false
+                            always_show_set_button: false
+                            collapse: false
+                            previews: true
+                            type: bard
+                            display: Text
+                            icon: bard
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              type: translatable
+              display: Händler-AGB-Hinweis
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              localizable: false
+          - handle: internal_order_subject
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Betreff interne Händler-Bestellmail'
+              localizable: true
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false

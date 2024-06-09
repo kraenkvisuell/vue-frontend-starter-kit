@@ -1,0 +1,12 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-fe8d8411.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/js/shop-color.js": {
+    "file": "assets/shop-color-aecfe15a.js",
+    "isEntry": true,
+    "src": "resources/js/shop-color.js"
+  }
+}

@@ -1,0 +1,9 @@
+{
+    "name": "kraenkvisuell/vue-frontend-starter-kit",
+    "extra": {
+        "statamic": {
+            "name": "Vue Frontend Starter Kit",
+            "description": "Vue Frontend Starter Kit"
+        }
+    }
+}

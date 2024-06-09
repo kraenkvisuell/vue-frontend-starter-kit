@@ -1,0 +1,198 @@
+title: Hero
+fields:
+  -
+    handle: has_hero
+    field:
+      default: true
+      type: toggle
+      display: 'Hat Hero'
+      localizable: false
+      width: 33
+  -
+    handle: hero_type
+    field:
+      options:
+        slideshow: Bild/Slideshow
+        video: Video
+      type: select
+      display: Hero-Typ
+      default: slideshow
+      localizable: false
+      width: 33
+      if:
+        has_hero: 'equals true'
+  -
+    handle: hero_size
+    field:
+      options:
+        lg: Groß
+        md: Mittel
+        sm: Klein
+      default: md
+      type: select
+      display: Hero-Größe
+      localizable: false
+      width: 33
+      if:
+        has_hero: 'equals true'
+  -
+    handle: hero_video_phone
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: 'Video (Phone)'
+      width: 50
+      validate:
+        - 'mimes:mp4,webm'
+      if:
+        has_hero: 'equals true'
+        hero_type: 'equals video'
+      always_save: true
+      localizable: false
+  -
+    handle: hero_video_desktop
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: 'Video (Desktop)'
+      width: 50
+      validate:
+        - 'mimes:mp4,webm'
+      if:
+        has_hero: 'equals true'
+        hero_type: 'equals video'
+      always_save: true
+      localizable: false
+  -
+    handle: hero_slideshow
+    field:
+      collapse: true
+      fullscreen: false
+      type: replicator
+      display: Slideshow
+      if:
+        has_hero: 'equals true'
+        hero_type: 'equals slideshow'
+      always_save: true
+      localizable: false
+      sets:
+        neue_set-gruppe:
+          display: null
+          sets:
+            slide:
+              display: Slide
+              icon: media-image-picture-orientation
+              fields:
+                -
+                  handle: image_phone
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: 'Bild (Phone)'
+                    width: 50
+                    validate:
+                      - 'mimes:jpg,jpeg,webp,png,gif'
+                    instructions: 'Wenn leer wird "Bild (Desktop)" genommen'
+                    localizable: false
+                -
+                  handle: image_desktop
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: 'Bild (Desktop)'
+                    validate:
+                      - 'mimes:jpg,jpeg,webp,png,gif'
+                    width: 50
+                    instructions: 'Wenn leer wird "Bild (Phone)" genommen'
+                    localizable: false
+                -
+                  handle: alt
+                  field:
+                    type: text
+                    display: 'Alt Text'
+                    localizable: false
+  -
+    import: title_position_size
+  -
+    handle: disruptor_section
+    field:
+      type: section
+      display: Störer
+      localizable: false
+      if:
+        has_hero: 'equals true'
+        hero_size: 'not sm'
+  -
+    handle: hero_disruptors
+    field: disruptors.disruptors
+    config:
+      if:
+        has_hero: 'equals true'
+        hero_size: 'not sm'
+  -
+    handle: link_button_section
+    field:
+      type: section
+      display: Link-Button
+      localizable: false
+      if:
+        has_hero: 'equals true'
+        hero_size: 'not sm'
+  -
+    handle: hero_link_text
+    field:
+      type: translatable
+      display: Link-Text
+      localizable: false
+      if:
+        has_hero: 'equals true'
+      sets:
+        neue_set-gruppe:
+          display: null
+          sets:
+            neues_set:
+              display: 'Neues Set'
+              fields:
+                -
+                  handle: text
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Text
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+  -
+    handle: hero_link_type
+    field: link.link_type
+    config:
+      width: 50
+      if:
+        has_hero: 'equals true'
+        hero_size: 'not sm'
+  -
+    handle: hero_linked_product
+    field: link.linked_product
+    config:
+      if:
+        has_hero: 'equals true'
+        hero_link_type: 'equals product'
+        hero_size: 'not sm'
+      width: 50
+  -
+    handle: hero_linked_page
+    field: link.linked_page
+    config:
+      if:
+        has_hero: 'equals true'
+        hero_link_type: 'equals page'
+        hero_size: 'not sm'
+      width: 50

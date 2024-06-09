@@ -1,0 +1,14 @@
+title: 'Hat Link'
+fields:
+  -
+    handle: has_link
+    field:
+      default: false
+      type: toggle
+      display: 'Hat Link'
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

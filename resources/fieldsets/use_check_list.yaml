@@ -1,0 +1,15 @@
+title: 'Häkchen als Aufzählungszeichen verwenden'
+fields:
+  -
+    handle: has_check_list
+    field:
+      default: false
+      type: toggle
+      display: 'Häkchen als Aufzählungszeichen verwenden'
+      icon: toggle
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      localizable: false
+      replicator_preview: false

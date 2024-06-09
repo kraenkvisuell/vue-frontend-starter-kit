@@ -1,0 +1,58 @@
+title: XY-Position
+fields:
+  -
+    handle: x_phone
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'X (Phone)'
+      icon: text
+      instructions: 'Horizontale Position vom Zentrum in Prozent, negativ für "nach links" (Smartphone)'
+      width: 25
+      listable: hidden
+      instructions_position: below
+      visibility: visible
+      hide_display: false
+  -
+    handle: y_phone
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Y (Phone)'
+      icon: text
+      instructions: 'Vertikale Position vom Zentrum in Prozent, negativ für "nach oben" (Smartphone)'
+      width: 25
+      listable: hidden
+      instructions_position: below
+      visibility: visible
+      hide_display: false
+  -
+    handle: x_desktop
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'X (Desktop)'
+      icon: text
+      instructions: 'Horizontale Position vom Zentrum in Prozent, negativ für "nach links" (Desktop)'
+      width: 25
+      listable: hidden
+      instructions_position: below
+      visibility: visible
+      hide_display: false
+  -
+    handle: y_desktop
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Y (Desktop)'
+      icon: text
+      instructions: 'Vertikale Position vom Zentrum in Prozent, negativ für "nach oben" (Desktop)'
+      width: 25
+      listable: hidden
+      instructions_position: below
+      visibility: visible
+      hide_display: false

@@ -1,0 +1,190 @@
+title: SEO-Felder
+fields:
+  -
+    handle: seo_title
+    field:
+      display_mode: short
+      sets:
+        neue_set-gruppe:
+          display: 'Neue Set-Gruppe'
+          instructions: null
+          icon: null
+          sets:
+            neues_set:
+              display: 'Neues Set'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: text
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Text
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    character_limit: '60'
+      type: translatable
+      display: Browser-Title
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      instructions: 'Wir empfehlen max. 60 Zeichen'
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: og_title
+    field:
+      display_mode: short
+      sets:
+        neue_set-gruppe:
+          display: 'Neue Set-Gruppe'
+          instructions: null
+          icon: null
+          sets:
+            neues_set:
+              display: 'Neues Set'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: text
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Text
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    character_limit: '60'
+      type: translatable
+      display: 'Open Graph Title'
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      instructions: 'Wir empfehlen max. 60 Zeichen. Wenn leer, wird der Browser-Title genommen.'
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: seo_description
+    field:
+      display_mode: short
+      sets:
+        neue_set-gruppe:
+          display: 'Neue Set-Gruppe'
+          instructions: null
+          icon: null
+          sets:
+            neues_set:
+              display: 'Neues Set'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: text
+                  field:
+                    antlers: false
+                    type: textarea
+                    display: Text
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    character_limit: '160'
+      type: translatable
+      display: Meta-Description
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      instructions: 'Wir empfehlen max. 160 Zeichen.'
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: og_description
+    field:
+      display_mode: short
+      sets:
+        neue_set-gruppe:
+          display: 'Neue Set-Gruppe'
+          instructions: null
+          icon: null
+          sets:
+            neues_set:
+              display: 'Neues Set'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: text
+                  field:
+                    antlers: false
+                    type: textarea
+                    display: Text
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    character_limit: '200'
+      type: translatable
+      display: Open Graph Description
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      instructions: 'Wir empfehlen max. 200 Zeichen. Wird auch für Twitter-Cards genommen. Wenn leer, wird die Meta-Description genommen.'
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: og_image
+    field:
+      max_files: 1
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: 'Open Graph Image'
+      instructions: 'Wir empfehlen 1200 x 630 px.'
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: twitter_card_image
+    field:
+      max_files: 1
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: 'Twitter Card Image'
+      instructions: 'Wir empfehlen 1024 x 512 px. Wenn leer, wird das Open Graph Image genommen.'
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

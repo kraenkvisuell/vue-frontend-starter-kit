@@ -1,0 +1,29 @@
+title: 'Seitenverhältnis erzwingen'
+fields:
+  -
+    handle: force_ratio
+    field:
+      default: false
+      type: toggle
+      display: 'Seitenverhältnis erzwingen'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      width: 33
+      localizable: false
+      replicator_preview: false
+  -
+    handle: ratio
+    field: ratio.ratio
+    config:
+      width: 33
+      if:
+        force_ratio: 'equals true'
+  -
+    handle: medium_fit
+    field: medium_fit.medium_fit
+    config:
+      width: 33
+      if:
+        force_ratio: 'equals true'

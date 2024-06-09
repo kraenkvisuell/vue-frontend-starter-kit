@@ -1,0 +1,372 @@
+tabs:
+  header:
+    display: Header
+    sections:
+      -
+        display: Header-Balken
+        fields:
+          -
+            handle: header_bar_left
+            field:
+              fullscreen: false
+              type: group
+              display: 'Header-Balken links'
+              localizable: false
+              fields:
+                -
+                  import: header_bar_item
+          -
+            handle: header_bar_center
+            field:
+              fullscreen: false
+              type: group
+              display: 'Header-Balken mitte'
+              localizable: false
+              fields:
+                -
+                  import: header_bar_item
+          -
+            handle: header_bar_right
+            field:
+              fullscreen: false
+              type: group
+              display: 'Header-Balken rechts'
+              localizable: false
+              fields:
+                -
+                  import: header_bar_item
+  main:
+    display: Footer
+    sections:
+      -
+        fields:
+          -
+            handle: seals
+            field:
+              collapse: true
+              fullscreen: false
+              type: replicator
+              display: Siegel
+              localizable: false
+              sets:
+                neue_set-gruppe:
+                  display: Siegel
+                  sets:
+                    seal:
+                      display: Siegel
+                      icon: favorite-star
+                      fields:
+                        -
+                          handle: image
+                          field:
+                            max_files: 1
+                            container: assets
+                            type: assets
+                            display: Bild
+                            localizable: false
+                            replicator_preview: true
+                            width: 50
+                        -
+                          handle: link
+                          field:
+                            type: text
+                            display: Link
+                            localizable: false
+                            width: 50
+                        -
+                          handle: title
+                          field:
+                            type: translatable
+                            display: Titel
+                            localizable: false
+                            sets:
+                              neue_set-gruppe:
+                                display: 'Neue Set-Gruppe'
+                                sets:
+                                  neues_set:
+                                    display: 'Neues Set'
+                                    fields:
+                                      -
+                                        handle: text
+                                        field:
+                                          type: text
+                                          display: Text
+                                          localizable: false
+                        -
+                          handle: alt
+                          field:
+                            type: translatable
+                            display: 'Alt Text'
+                            localizable: false
+                            sets:
+                              neue_set-gruppe:
+                                display: 'Neue Set-Gruppe'
+                                sets:
+                                  neues_set:
+                                    display: 'Neues Set'
+                                    fields:
+                                      -
+                                        handle: text
+                                        field:
+                                          type: text
+                                          display: Text
+                                          localizable: false
+          -
+            handle: copyright
+            field:
+              type: translatable
+              display: Copyright
+              localizable: false
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      fields:
+                        -
+                          handle: text
+                          field:
+                            buttons:
+                              - bold
+                              - italic
+                              - anchor
+                            toolbar_mode: floating
+                            remove_empty_nodes: trim
+                            type: bard
+                            display: Text
+                            localizable: false
+          -
+            handle: social_media
+            field:
+              type: replicator
+              display: 'Social Media'
+              localizable: false
+              sets:
+                links:
+                  display: Links
+                  sets:
+                    link:
+                      display: Link
+                      fields:
+                        -
+                          handle: icon
+                          field:
+                            options:
+                              facebook: Facebook
+                              instagram: Instagram
+                              pinterest: Pinterest
+                            taggable: false
+                            push_tags: false
+                            multiple: false
+                            clearable: false
+                            searchable: true
+                            cast_booleans: false
+                            type: select
+                            display: Icon
+                            icon: select
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: link
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: Link
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+  media:
+    display: Medien
+    sections:
+      -
+        display: Navi
+        fields:
+          -
+            handle: navi_bg
+            field: image.image_file
+            config:
+              display: Navi-BG
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            handle: seo_section
+            field:
+              type: section
+              display: SEO-Felder
+              instructions: 'Default-Werte für leer gelassene Felder. Bestimmte Seiten wie z.B. eine Produktseite haben automatisch generierten SEO-Felder.'
+              localizable: false
+          -
+            import: seo_fields
+  newsletter_tab:
+    display: Newsletter
+    sections:
+      -
+        display: Footer
+        fields:
+          -
+            handle: newsletter_intro
+            field:
+              type: translatable
+              display: Newsletter-Intro
+              localizable: false
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      fields:
+                        -
+                          handle: text
+                          field:
+                            buttons:
+                              - h2
+                              - h3
+                              - bold
+                              - italic
+                              - unorderedlist
+                              - orderedlist
+                              - anchor
+                            toolbar_mode: floating
+                            remove_empty_nodes: trim
+                            type: bard
+                            display: Text
+                            localizable: false
+          -
+            handle: newsletter_form
+            field:
+              type: code
+              display: Newsletter-Formular
+              localizable: false
+          -
+            handle: newsletter_cookie_consent
+            field: needs_cookie_consent.needs_cookie_consent
+            config:
+              display: 'Newsletter: Benötigt Cookie Consent'
+  redirects_tab:
+    display: Weiterleitungen
+    sections:
+      -
+        fields:
+          -
+            handle: redirects
+            field:
+              collapse: true
+              fullscreen: false
+              type: replicator
+              display: Weiterleitungen
+              localizable: false
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  sets:
+                    redirect:
+                      display: Weiterleitung
+                      fields:
+                        -
+                          handle: url_part
+                          field:
+                            type: text
+                            display: Pfad
+                            instructions: 'Jedem Pfad ist automatisch das Sprachkürzel vorangestellt - es muss also das angegeben werden was nach "zwei-bags.com/de/" etc. kommt.'
+                            localizable: false
+                            listable: true
+                            replicator_preview: true
+                            prepend: 'zwei-bags.com/[de, en, etc]/'
+                        -
+                          import: link
+  embed_scripts_tab:
+    display: Scripts/Codes
+    sections:
+      -
+        display: 'Embed Codes'
+        fields:
+          -
+            handle: embed_codes
+            field:
+              type: replicator
+              display: 'Embed Codes'
+              localizable: false
+              sets:
+                embed_codes:
+                  display: 'Embed Codes'
+                  sets:
+                    embed_code:
+                      display: 'Embed Code'
+                      icon: programming-script-code-brackets
+                      fields:
+                        -
+                          handle: title
+                          field:
+                            type: text
+                            display: Titel
+                            replicator_preview: true
+                            localizable: false
+                        -
+                          import: needs_cookie_consent
+                        -
+                          handle: position
+                          field:
+                            options:
+                              head: 'im <head> Bereich'
+                              body_begin: 'Am Anfang des <body> Bereichs'
+                              body_end: 'Am Ende des <body> Bereichs'
+                            searchable: false
+                            default: head
+                            type: select
+                            display: Position
+                            localizable: false
+                            replicator_preview: true
+                            width: 50
+                        -
+                          handle: only_in_production
+                          field:
+                            default: true
+                            type: toggle
+                            display: 'Nur auf Live-Website'
+                            localizable: false
+                            width: 50
+                        -
+                          handle: code
+                          field:
+                            type: code
+                            display: Code
+                            localizable: false
+          -
+            handle: cookie_banner_intro
+            field:
+              type: translatable
+              display: 'Cookie-Banner Intro'
+              localizable: false
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      fields:
+                        -
+                          handle: text
+                          field:
+                            buttons:
+                              - h2
+                              - h3
+                              - bold
+                              - italic
+                              - unorderedlist
+                              - orderedlist
+                              - anchor
+                            toolbar_mode: floating
+                            remove_empty_nodes: trim
+                            type: bard
+                            display: Text
+                            localizable: false

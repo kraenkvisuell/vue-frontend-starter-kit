@@ -1,0 +1,30 @@
+title: 'Titel Position/Größe'
+fields:
+  -
+    handle: title_position
+    field:
+      options:
+        top: Oben
+        centered: Mitte
+        bottom: Unten
+      inline: true
+      default: top
+      type: radio
+      display: Titel-Position
+      localizable: false
+      width: 50
+  -
+    handle: title_size
+    field:
+      options:
+        sm: Klein
+        md: Normal
+        lg: Groß
+      inline: true
+      default: md
+      type: radio
+      display: Titel-Größe
+      instructions: 'Wirkt sich nur bei großen Bildschirmgrößen aus'
+      localizable: false
+      width: 50
+      instructions_position: below

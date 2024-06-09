@@ -1,0 +1,177 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+@font-face {
+    font-family: 'Outfit';
+    font-weight: 200;
+    src: url('/resources/fonts/Outfit-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Outfit';
+    font-weight: 300;
+    src: url('/resources/fonts/Outfit-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Outfit';
+    font-weight: 400;
+    src: url('/resources/fonts/Outfit-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Outfit';
+    font-weight: 500;
+    src: url('/resources/fonts/Outfit-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Outfit';
+    font-weight: 600;
+    src: url('/resources/fonts/Outfit-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Outfit';
+    font-weight: 700;
+    src: url('/resources/fonts/Outfit-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Outfit';
+    font-weight: 800;
+    src: url('/resources/fonts/Outfit-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Outfit';
+    font-weight: 900;
+    src: url('/resources/fonts/Outfit-Black.ttf') format('truetype');
+}
+
+
+html {
+    @apply text-[16px];
+}
+
+body.locked {
+    overflow: hidden;
+}
+
+.editor h1, .editor h2, .editor h3, .editor h4, .editor h5 {
+    @apply leading-tight;
+}
+
+.editor h1, .editor h2, .editor h3 {
+    @apply text-headline-base font-bold mt-[1em];
+}
+
+.editor h1, .editor h2 {
+    @apply uppercase;
+}
+
+.popup .editor h2, .popup .editor h1 {
+    @apply text-headline-lg sm:text-headline-lg font-bold;
+}
+
+.editor h1:first-child, .editor h2:first-child, .editor h3:first-child, .editor h4:first-child, .editor h5:first-child {
+    @apply mt-0;
+}
+
+.editor h4 {
+    @apply text-headline-sm uppercase tracking-wider font-bold mt-[1.8em];
+}
+
+.editor h5 {
+    @apply text-headline-xs uppercase tracking-wider font-bold mt-[1.8em];
+}
+
+.editor p, .editor li {
+    @apply hyphens-auto tracking-normal;
+}
+
+.editor p, .editor ul, .editor ol {
+    @apply my-[0.5em];
+}
+
+.editor p:first-child, .editor ul:first-child, .editor ol:first-child {
+    @apply mt-0;
+}
+
+.editor ul, .editor ol {
+    @apply pl-[30px];
+}
+
+.editor ul li {
+    @apply list-disc;
+}
+
+.editor ol li {
+    @apply list-decimal;
+}
+
+.editor li p {
+    @apply my-0;
+}
+
+.editor a {
+    @apply underline decoration-1 underline-offset-2;
+}
+
+.editor.has-check-list ul li {
+    @apply list-none;
+}
+
+.editor.has-check-list ul li::before {
+    content: url("data:image/svg+xml;utf8,<svg width='1.2rem' heigth='1.2rem' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 157.9 157.9'><circle cx='63.9' fill='%23595A58' cy='94' r='63.9'/><polygon fill='white' points='61.5,122 36.1,103.6 42.7,94.5 58.9,106.3 82.9,72 92.1,78.4 '/></svg>");
+    position: absolute;
+    top: 2px;
+    left: -27px;
+    width: 20px;
+    height: 20px;
+}
+
+.editor hr {
+    @apply my-[20px] border-0 h-[1px] bg-gray-600;
+}
+
+.seo-text {
+    @apply hyphens-auto;
+}
+
+.seo-text h1, .seo-text h2, .seo-text h3, .seo-text h4, .seo-text h5, .seo-text h6 {
+    @apply text-headline-xs font-bold mt-[1em] mb-[0.5em] leading-tight;
+}
+
+* {
+    @apply relative;
+}
+
+.swiper-button-prev,
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next,
+.swiper-button-next.swiper-button-disabled {
+    @apply hidden opacity-0;
+}
+
+.product-image-swiper .swiper-slide {
+    @apply md:h-auto;
+}
+
+.embed-code > p, .embed-code > span, .embed-code > div {
+    @apply hidden;
+}
+
+html {
+    --swiper-pagination-color: #595A58;
+    --swiper-pagination-bullet-width: 8px;
+    --swiper-pagination-bullet-height: 8px;
+    --swiper-pagination-bullet-inactive-color: #595A58;
+    --swiper-pagination-bullet-inactive-opacity: 0.3;
+    --swiper-pagination-bullet-opacity: 1;
+    --swiper-pagination-bullet-vertical-gap: 10px;
+    --swiper-pagination-left: 20px;
+}

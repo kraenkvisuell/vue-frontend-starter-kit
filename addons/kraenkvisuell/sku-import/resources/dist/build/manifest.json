@@ -1,0 +1,12 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-d6fd85ba.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/js/sku-import.js": {
+    "file": "assets/sku-import-233a4fa1.js",
+    "isEntry": true,
+    "src": "resources/js/sku-import.js"
+  }
+}

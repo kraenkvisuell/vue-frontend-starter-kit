@@ -1,0 +1,29 @@
+nav:
+  reorder: true
+  sections:
+    top_level: '@inherit'
+    content:
+      display: Website
+      reorder: true
+      items:
+        'content::collections::seiten': '@move'
+        'content::collections::jobs': '@move'
+        'content::collections::e_mail_vorlagen': '@move'
+        'content::navigation': '@inherit'
+        'content::taxonomies': '@inherit'
+        'content::assets': '@inherit'
+        'content::globals': '@inherit'
+        'content::collections':
+          display: 'Alle Sammlungen'
+          action: '@hide'
+    shop:
+      action: '@create'
+      display: Shop
+      items:
+        'content::bestellungen': '@move'
+        'content::kategorien': '@move'
+        'content::unterkategorien': '@move'
+        'content::kollektionen': '@move'
+        'content::modelle': '@move'
+        'content::rabattcodes': '@move'
+        'content::handler': '@move'

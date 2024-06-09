@@ -1,0 +1,525 @@
+title: Shop-Einstellungen
+tabs:
+  main:
+    display: Hauptteil
+    sections:
+      -
+        fields:
+          -
+            handle: shop_title
+            field:
+              type: text
+              display: 'Shop Title'
+              localizable: true
+          -
+            handle: hero_section
+            field:
+              type: section
+              display: Hero
+              localizable: false
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: has_hero
+            field: hero.has_hero
+          -
+            handle: hero_size
+            field: hero.hero_size
+            config:
+              width: 33
+              if:
+                has_hero: 'equals true'
+          -
+            handle: hero_type
+            field: hero.hero_type
+            config:
+              width: 33
+              if:
+                has_hero: 'equals true'
+          -
+            handle: title_size
+            field: hero.title_size
+          -
+            handle: title_position
+            field: hero.title_position
+          -
+            handle: hero_slideshow
+            field: hero.hero_slideshow
+            config:
+              if:
+                has_hero: 'equals true'
+                hero_type: 'equals slideshow'
+              always_save: true
+          -
+            handle: hero_video_desktop
+            field: hero.hero_video_desktop
+            config:
+              validate:
+                - 'mimes:mp4,webm'
+              if:
+                has_hero: 'equals true'
+                hero_type: 'equals video'
+              always_save: true
+          -
+            handle: hero_video_phone
+            field: hero.hero_video_phone
+            config:
+              validate:
+                - 'mimes:mp4,webm'
+              if:
+                has_hero: 'equals true'
+                hero_type: 'equals video'
+              always_save: true
+          -
+            handle: texts_section
+            field:
+              type: section
+              display: Texte
+              localizable: false
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: intro
+            field:
+              display_mode: short
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: text
+                          field: main_editor.editor_text
+                          config:
+                            buttons:
+                              - h2
+                              - h3
+                              - h4
+                              - h5
+                              - bold
+                              - italic
+                              - unorderedlist
+                              - orderedlist
+                              - anchor
+                              - underline
+                              - horizontalrule
+                              - alignleft
+                              - aligncenter
+                              - alignright
+                            display: Text
+              type: translatable
+              display: Intro
+              localizable: false
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: seo_section
+            field:
+              type: section
+              display: SEO-Felder
+              instructions: 'SEO-Felder für die Shop-Seite (alle Taschen).'
+              localizable: false
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            import: seo_fields
+  vat:
+    display: 'MWSt, Gebühren'
+    sections:
+      -
+        fields:
+          -
+            handle: default_vat_percentage
+            field:
+              type: text
+              display: 'Default MWSt'
+              localizable: true
+              width: 33
+          -
+            handle: co2_compensation
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: CO2-Kompensations-Preis
+              localizable: true
+              width: 33
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              instructions: 'in EUR bzw CHF'
+          -
+            handle: plastic_compensation
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Plastik-Kompensations-Preis
+              localizable: true
+              width: 33
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              instructions: 'in EUR bzw CHF'
+  checkout:
+    display: Kaufvorgang
+    sections:
+      -
+        fields:
+          -
+            handle: shipping_popup_text
+            field:
+              display_mode: short
+              sets:
+                neue_set-gruppe:
+                  display: null
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: text
+                          field:
+                            buttons:
+                              - h2
+                              - h3
+                              - bold
+                              - italic
+                              - unorderedlist
+                              - orderedlist
+                              - anchor
+                              - table
+                            smart_typography: false
+                            save_html: false
+                            inline: false
+                            toolbar_mode: floating
+                            reading_time: false
+                            word_count: false
+                            fullscreen: true
+                            allow_source: true
+                            enable_input_rules: true
+                            enable_paste_rules: true
+                            remove_empty_nodes: trim
+                            antlers: false
+                            link_noopener: false
+                            link_noreferrer: false
+                            target_blank: false
+                            always_show_set_button: false
+                            collapse: false
+                            previews: true
+                            type: bard
+                            display: Text
+                            icon: bard
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              type: translatable
+              display: 'Versandinfos (Popups)'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              localizable: false
+          -
+            handle: cart_bottom_info
+            field:
+              display_mode: short
+              sets:
+                neue_set-gruppe:
+                  display: null
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: text
+                          field:
+                            buttons:
+                              - h2
+                              - h3
+                              - bold
+                              - italic
+                              - unorderedlist
+                              - orderedlist
+                              - anchor
+                              - table
+                            smart_typography: false
+                            save_html: false
+                            inline: false
+                            toolbar_mode: floating
+                            reading_time: false
+                            word_count: false
+                            fullscreen: true
+                            allow_source: true
+                            enable_input_rules: true
+                            enable_paste_rules: true
+                            remove_empty_nodes: trim
+                            antlers: false
+                            link_noopener: false
+                            link_noreferrer: false
+                            target_blank: false
+                            always_show_set_button: false
+                            collapse: false
+                            previews: true
+                            type: bard
+                            display: Text
+                            icon: bard
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              type: translatable
+              display: Warenkorb-Info
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              localizable: false
+          -
+            handle: online_payment_kinds
+            field:
+              collapse: true
+              previews: true
+              fullscreen: true
+              sets:
+                neue_set-gruppe:
+                  display: null
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: title
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: Bezeichnung
+                            icon: text
+                            width: 50
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: image
+                          field:
+                            max_files: 1
+                            mode: list
+                            container: assets
+                            restrict: false
+                            allow_uploads: true
+                            show_filename: true
+                            show_set_alt: true
+                            type: assets
+                            display: Grafik
+                            icon: assets
+                            width: 50
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              type: replicator
+              display: Online-Zahlungsarten
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              localizable: false
+          -
+            handle: stripe_success_page
+            field:
+              display_mode: short
+              sets:
+                neue_set-gruppe:
+                  display: null
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: text
+                          field:
+                            buttons:
+                              - h2
+                              - h3
+                              - bold
+                              - italic
+                              - unorderedlist
+                              - orderedlist
+                              - anchor
+                            smart_typography: false
+                            save_html: false
+                            inline: false
+                            toolbar_mode: floating
+                            reading_time: false
+                            word_count: false
+                            fullscreen: true
+                            allow_source: true
+                            enable_input_rules: true
+                            enable_paste_rules: true
+                            remove_empty_nodes: trim
+                            antlers: false
+                            link_noopener: false
+                            link_noreferrer: false
+                            target_blank: false
+                            always_show_set_button: false
+                            collapse: false
+                            previews: true
+                            type: bard
+                            display: Text
+                            icon: bard
+                            localizable: false
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              type: translatable
+              display: 'Text Online-Zahlungs-Erfolgsseite'
+              localizable: false
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: prepayment_success_page
+            field:
+              display_mode: short
+              sets:
+                neue_set-gruppe:
+                  display: null
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: text
+                          field:
+                            buttons:
+                              - h2
+                              - h3
+                              - bold
+                              - italic
+                              - unorderedlist
+                              - orderedlist
+                              - anchor
+                            smart_typography: false
+                            save_html: false
+                            inline: false
+                            toolbar_mode: floating
+                            reading_time: false
+                            word_count: false
+                            fullscreen: true
+                            allow_source: true
+                            enable_input_rules: true
+                            enable_paste_rules: true
+                            remove_empty_nodes: trim
+                            antlers: false
+                            link_noopener: false
+                            link_noreferrer: false
+                            target_blank: false
+                            always_show_set_button: false
+                            collapse: false
+                            previews: true
+                            type: bard
+                            display: Text
+                            icon: bard
+                            localizable: false
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              type: translatable
+              display: 'Text Vorauszahlung-Erfolgsseite'
+              localizable: false
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+  bank:
+    display: Bank
+    sections:
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            handle: bank_data
+            field:
+              antlers: false
+              type: textarea
+              display: Bankdaten
+              localizable: true
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+  categories:
+    display: Kategorien
+    sections:
+      -
+        display: 'Alle Kategorien'
+        fields:
+          -
+            import: categories
+            prefix: all_
+      -
+        display: Haupt-Kategorien
+        fields:
+          -
+            import: categories
+            prefix: main_
