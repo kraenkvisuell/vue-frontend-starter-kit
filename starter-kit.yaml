@@ -57,4 +57,3 @@ dependencies_dev:
   laravel-lang/common: ^6.0
   laravel/pint: ^1.10
   laravel/telescope: ^5.0
-  wnx/laravel-stats: ^2.13
