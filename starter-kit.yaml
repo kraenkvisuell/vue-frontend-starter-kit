@@ -55,14 +55,10 @@ dependencies:
   tightenco/ziggy: ^1.6
 dependencies_dev:
   barryvdh/laravel-debugbar: ^3.6
-  fakerphp/faker: ^1.9.1
   laracasts/cypress: ^3.0
   laravel-lang/common: ^6.0
   laravel/pint: ^1.10
   laravel/telescope: ^5.0
-  mockery/mockery: ^1.4.4
-  nunomaduro/collision: ^8.1
   pestphp/pest: ^2.24
   pestphp/pest-plugin-laravel: ^2.2
-  phpunit/phpunit: ^11.0
   wnx/laravel-stats: ^2.13
